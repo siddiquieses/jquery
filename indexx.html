@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<h1 id="hide">Welcome to jquery</h1>
+<h1 id="show">Welcome to jqueryfunctionn</h1>
+<input type="button" value="hide" id="hidebtn">
+<input type="button" value="show" id="showbtn">
+<input type="button" value="toggle" id="togglebtn">
+
+<body>
+    <script>
+        $(document).ready(function () {
+            $('#hidebtn').click(function () {
+                $('#hide').hide(3000, function () {
+                    alert("Hide is completed")
+                });
+            })
+            $('#showbtn').click(function () {
+                $('#hide').show("fast", function () {
+                    alert(" show is completed")
+                });
+            })
+            $('#togglebtn').click(function () {
+                $('h1').toggle("fast", function () {
+
+                });
+
+            })
+        })
+    </script>
+</body>
+
+</html>
